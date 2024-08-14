@@ -17,13 +17,6 @@ resource "azurerm_storage_container" "container" {
   container_access_type = "private"
 }
 
-resource "azurerm_storage_blob" "blob" {
-  name                   = "my-awesome-content.zip"
-  storage_account_name   = azurerm_storage_account.sa.name
-  storage_container_name = azurerm_storage_container.container.name
-  type                   = "Block"
-  source                 = "some-local-file.zip"
-}
 
 output "blob_storage_url" {
   value = "https://${azurerm_storage_account.sa.name}.blob.core.windows.net/${azurerm_storage_container.container.name}/"
