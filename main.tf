@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-example-storage"
+  name     = "clickclaims-rgp-test-0001"
   location = "centralus"
 }
 
