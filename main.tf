@@ -7,7 +7,8 @@ resource "azurerm_storage_account" "aspire" {
   name                     = "aspirestorage"  # Ensure the name is globally unique
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
-  account_tier             = "Standard"
+  account_tier             = "Premium"
+  account_kind             = "FileStorage"
   account_replication_type = "LRS"
   large_file_share_enabled = true
 }
