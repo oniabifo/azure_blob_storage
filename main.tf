@@ -13,7 +13,7 @@ resource "azurerm_storage_account" "aspire" {
 }
 
 resource "azurerm_storage_share" "example" {
-  name                 = "aspire_share"
+  name                 = "aspire-share"
   storage_account_name = azurerm_storage_account.aspire.name
   quota                = 5000
 
