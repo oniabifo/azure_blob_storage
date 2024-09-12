@@ -1,11 +1,19 @@
-resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
-  location = "centralus"
+data "azurerm_resource_group" "rg" {
+  name = var.resource_group_name
 }
+
+output "name" {
+  value = data.azurerm_resource_group.rg.name
+}
+
+# resource "azurerm_resource_group" "rg" {
+#   name     = var.resource_group_name
+#   location = "centralus"
+# }
 
 resource "azurerm_storage_account" "aspire_storage" {
   name                     = var.storage_account_name
-  resource_group_name      = azurerm_resource_group.rg.name
+  resource_group_name      = data.azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Premium"
   account_kind             = "FileStorage"
