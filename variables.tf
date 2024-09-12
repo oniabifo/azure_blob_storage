@@ -1,7 +1,7 @@
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default     = "clickclaims-rgp-storage-dev-01"
+  default     = "clickclaims-rg-storage-dev-01"
 }
 
 variable "location" {
@@ -13,11 +13,5 @@ variable "location" {
 variable "storage_account_name" {
   description = "The name of the storage account"
   type        = string
-  default     = "aspireshare-dev-01"
-}
-
-variable "container_name" {
-  description = "The name of the storage container"
-  type        = string
-  default     = "aspireshare-dev-01"
+  default     = "storag_dev_01"
 }
