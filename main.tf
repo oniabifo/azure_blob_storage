@@ -14,7 +14,7 @@ output "name" {
 resource "azurerm_storage_account" "aspire_storage" {
   name                     = var.storage_account_name
   resource_group_name      = data.azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
+  location = "centralus"
   account_tier             = "Premium"
   account_kind             = "FileStorage"
   account_replication_type = "LRS"
