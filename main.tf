@@ -15,7 +15,7 @@ resource "azurerm_storage_account" "aspire_storage" {
 
 resource "azurerm_storage_share" "aspire_share" {
   name                 = var.storage_account_name
-  storage_account_name = azurerm_storage_account.aspire.name
+  storage_account_name = azurerm_storage_account.aspire_storage.name
   quota                = 5000
 
   acl {
