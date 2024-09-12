@@ -1,7 +1,7 @@
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
-  default     = "rg-example-storage"
+  default     = "clickclaims-rgp-storage-dev-01"
 }
 
 variable "location" {
@@ -13,23 +13,11 @@ variable "location" {
 variable "storage_account_name" {
   description = "The name of the storage account"
   type        = string
-  default     = "aspire-storage"
+  default     = "aspireshare-dev-01"
 }
 
 variable "container_name" {
   description = "The name of the storage container"
   type        = string
-  default     = "aspire-container"
+  default     = "aspireshare-dev-01"
 }
-
-# variable "blob_name" {
-#   description = "The name of the blob"
-#   type        = string
-#   default     = "my-awesome-content.zip"
-# }
-
-# variable "source_file_path" {
-#   description = "The local file path for the blob source"
-#   type        = string
-#   default     = "some-local-file.zip"
-# }
